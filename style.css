@@ -107,6 +107,12 @@ body {
   font-size: 25px;
 }
 
+.project ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .project__title {
   margin-bottom: 110px;
   font-size: 41px;
@@ -116,6 +122,7 @@ body {
 
 .project__item {
   margin-bottom: 110px;
+  padding: 0;
 }
 
 .project__name {
@@ -151,6 +158,19 @@ body {
   font-size: 25px;
 }
 
+#gallery-1 .gallery-item {
+  margin: 0px;
+}
+
+#gallery__inner .gallery .gallery-item {
+  margin-top: 0;
+}
+
+#gallery__inner .gallery .gallery-item img {
+  display: block;
+  border: none;
+}
+
 .gallery__inner {
   display: flex;
   flex-wrap: wrap;
@@ -169,10 +189,15 @@ body {
 
 .footer__email {
   padding-top: 40px;
-  padding-bottom: 150px;
+  margin-bottom: 150px;
   color: #2f8bc5;
   font-size: 30px;
   font-weight: 300;
   font-family: "Lato", sans-serif;
+}
+
+.footer__email span {
+  display: inline-block;
   border-bottom: 1px solid #2f8bc5;
+  padding-bottom: 4px;
 }

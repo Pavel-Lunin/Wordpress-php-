@@ -19,7 +19,7 @@
 
 <body>
 
-  <header class="header" style="background-image: url(img/bg.jpg);">
+  <header class="header" style="background-image: url(<?php the_field ('top__bg') ?>);">
     <!--inner - внутренний-->
     <div class="header__inner">
       <img src="<?php bloginfo( 'template_url' ); ?>/assets/img/home.png" alt="">
@@ -29,6 +29,6 @@
       <div class="header__title"><?php the_field ('header__title') ?>
       </div>
       <div class="header__sale">
-        <img src="img/sale.png" alt=""></div>
+        <img src="<?php the_field ('header__sale') ?>" alt=""></div>
     </div>
   </header>

@@ -3,7 +3,9 @@
       <a href="tel:<?php the_field ('phone') ?>" class="phone"><?php the_field ('phone') ?>
       </a>
       <div class="footer__email">
-        namename@gmail.com
+       <span>
+<?php the_field ('email') ?>
+       </span>
       </div>
     </div>
 

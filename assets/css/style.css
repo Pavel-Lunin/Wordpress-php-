@@ -147,14 +147,6 @@ body {
   font-size: 25px;
 }
 
-.gallery__inner {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.gallery__inner img {
-  display: block;
-}
 .footer {
   text-align: center;
 }

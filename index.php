@@ -3,16 +3,10 @@
   <main class="main">
     <div class="container">
       <div class="main__title">
-        Строительство домов и бань из
-        строганного и профилированного бруса
+        <?php the_field ('main__title') ?>
       </div>
       <div class="main__text">
-        За 10 лет мы возвели больше 250 домов и бань из бруса
-
-        ИМЕЕМ БОЛЬШОЙ ОПЫТ В СТРОИТЕЛЬСТВЕ
-        гарантируем качество и надежность всех построенных нами объектов
-
-        ГАРАНТИЯ НА ДОМА И БАНИ ИЗ БРУСА 3 ГОДА
+        <?php the_field ('main__text') ?>
       </div>
       <div class="main__img">
         <img src="<?php bloginfo( 'template_url' ); ?>/assets/img/main-img.png" alt="" class="">
@@ -20,110 +14,59 @@
 
       <div class="project">
         <div class="project__title">
-          ПРОЕКТЫ ДОМОВ ИЗ БРУСА
+          <?php the_field ('project__title') ?>
         </div>
 
-        <div class="project__item">
-          <div class="project__name">
-            ДОМ #1
-          </div>
-          <div class="project__size">
-            Размер дома: 6 x 6
-          </div>
-          <div class="project__area">
-            Общая площадь дома: 54 кв. м
-          </div>
-          <div class="project__price">
-            Стоимость - 402 000 рублей
-          </div>
-          <div class="project__images">
-            <div class="project__images-item1">
-              <img src="img/project-1.jpg" alt="">
-            </div>
-            <div class="project__images-item">
-              <img src="img/project-2.jpg" alt="">
-            </div>
-          </div>
-        </div>
-
-        <div class="project__item">
-          <div class="project__name">
-            ДОМ #2
-          </div>
-          <div class="project__size">
-            Размер дома: 6 x 7.5
-          </div>
-          <div class="project__area">
-            Общая площадь дома: 72 кв. м
-          </div>
-          <div class="project__price">
-            Стоимость - 457 000 рублей
-          </div>
-          <div class="project__images">
-            <div class="project__images-item1">
-              <img src="img/project-3.jpg" alt="">
-            </div>
-            <div class="project__images-item">
-              <img src="img/project-4.jpg" alt="">
-            </div>
-          </div>
-        </div>
-
-        <div class="project__item">
-          <div class="project__name">
-            ДОМ #3
-          </div>
-          <div class="project__size">
-            Размер дома: 8 x 7.5
-          </div>
-          <div class="project__area">
-            Общая площадь дома: 92 кв. м
-          </div>
-          <div class="project__price">
-            Стоимость - 635 000 рублей
-          </div>
-          <div class="project__images">
-            <div class="project__images-item1">
-              <img src="img/project-5.jpg" alt="">
-            </div>
-            <div class="project__images-item">
-              <img src="img/project-6.jpg" alt="">
-            </div>
-          </div>
-        </div>
+          <?php
+          $posts = get_field('project__item');
+          if( $posts ): ?>
+              <ul>
+              <?php foreach( $posts as $post ): ?>
+                  <?php setup_postdata($post); ?>
+                  <li class="project__item">
+                      <div class="project__name">
+                        <?php the_field ('project__name') ?>
+                      </div>
+                      <div class="project__size">
+                        <?php the_field ('project__size') ?>
+                      </div>
+                      <div class="project__area">
+                        <?php the_field ('project__area') ?>
+                      </div>
+                      <div class="project__price">
+                        <?php the_field ('project__price') ?>
+                      </div>
+                      <div class="project__images">
+                        <div class="project__images-item1">
+                          <img src="<?php the_field ('project__images-item1') ?>" alt="">
+                        </div>
+                        <div class="project__images-item">
+                          <img src="<?php the_field ('project__images-item2') ?>" alt="">
+                        </div>
+                      </div>
+                  </li>
+              <?php endforeach; ?>
+              </ul>
+              <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
       </div>
-    </div>
-
+    </div> 
     <div class="download">
       <img src="<?php bloginfo( 'template_url' ); ?>/assets/img/home-download.png" alt="">
       <div class="download__link">
-        <a href="#">СКАЧАТЬ ВЕСЬ КАТАЛОГ ДОМОВ</a>
-
+        <a href="<?php the_field ('download__link') ?>" download>СКАЧАТЬ ВЕСЬ КАТАЛОГ ДОМОВ</a>
       </div>
     </div>
-
     <div class="container">
       <div class="gallery">
-
         <div class="gallery__title">
-          ФОТОГРАФИИ НАШИХ РАБОТ
+          <?php the_field ('gallery__title') ?>
         </div>
         <div class="gallery__text">
-          некоторые фотографии построенных нами домов и бань из бруса
+          <?php the_field ('gallery__text') ?>
         </div>
         <div class="gallery__inner">
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
-          <a href="img/item-1.jpg"><img src="img/item-1.jpg" alt=""></a>
+        <?php the_field ('photo') ?>
         </div>
       </div>
 
